@@ -3,16 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="grid.RSATest">
-        <methods>
-          <include name="HomePageCheck"/>
-        </methods>
-      </class> <!-- grid.RSATest -->
       <class name="grid.GoogleTest">
         <methods>
           <include name="HomePageCheck"/>
         </methods>
       </class> <!-- grid.GoogleTest -->
+      <class name="grid.RSATest">
+        <methods>
+          <include name="HomePageCheck"/>
+        </methods>
+      </class> <!-- grid.RSATest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

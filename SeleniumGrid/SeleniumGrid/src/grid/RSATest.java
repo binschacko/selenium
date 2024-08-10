@@ -10,6 +10,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class RSATest {
 
 	
@@ -18,13 +20,14 @@ public class RSATest {
 	public void HomePageCheck() throws MalformedURLException
 	{
 		DesiredCapabilities caps = new DesiredCapabilities();
+		WebDriverManager.chromedriver().setup();
 		
 		//caps.setPlatform("");
 //		caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 		
 		
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.2.94:4444"), caps);
+		WebDriver driver = new RemoteWebDriver(new URL("http://10.0.0.83:4444"), caps);
 		driver.get("http://rahulshettyacademy.com");
 		System.out.println(driver.getTitle());
 		driver.close();
